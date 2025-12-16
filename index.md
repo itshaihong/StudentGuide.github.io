@@ -1,4 +1,9 @@
+# index.md
 
+---
+title: Getting Started with reComputer J30/40 for Edge AI
+layout: default
+---
 
 # reComputer J30/40 Setup Guide
 
