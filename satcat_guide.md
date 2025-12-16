@@ -1,4 +1,3 @@
-# satcat_guide.md
 
 ---
 title: Guide to Using Satcat.com
