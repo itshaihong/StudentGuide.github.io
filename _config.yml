@@ -7,7 +7,7 @@ url: "https://itshaihong.github.io/StudentGuide" # The base hostname & protocol 
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
 
