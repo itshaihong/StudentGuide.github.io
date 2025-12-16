@@ -1,0 +1,7 @@
+# _data/navigation.yml
+
+main:
+  - title: reComputer Setup
+    url: /
+  - title: Satcat.com Guide
+    url: /satcat-guide/
