@@ -2,7 +2,7 @@
 ---
 title: Guide to Using Satcat.com
 layout: default
-permalink: /satcat-guide/
+permalink: /StudentGuide/satcat-guide/
 ---
 
 # 🛰️ Guide to Using Satcat.com
