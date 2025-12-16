@@ -8,7 +8,7 @@ url: "https://itshaihong.github.io/StudentGuide" # The base hostname & protocol 
 
 # Build settings
 markdown: kramdown
-theme: minimal # A simple, clean Jekyll theme that comes pre-installed on GitHub Pages.
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
