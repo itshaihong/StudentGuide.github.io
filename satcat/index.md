@@ -28,9 +28,9 @@ You can search for satellite directory here using satellite name/NORAD ID/COSPAR
 
 {: .note}
 > **NORAD ID**: The North American Aerospace Defense Command (NORAD) maintains the satellite catalog. Each tracked object is assigned a unique identifier known as the SATCAT number or NORAD ID.
-
+{: .note}
 > **Two-Line Element (TLE)** is a standard, text-based data format that concisely describes the orbit of an Earth-orbiting satellite or space object at a specific time (epoch). TLEs contain simplified Keplerian elements (like inclination, eccentricity, mean motion) plus drag/perturbation factors, allowing users to predict future positions and velocities using models like SGP4.
-
+{: .note}
 > **Ephemeris** is a table or dataset providing the predicted positions, velocities, and sometimes other data (like brightness) for satellites. There are 3 main types of files: OPM, OMM, and OEM.
 
 ### 2.2. Screening for Conjunctions \[**Screenings tab**\]
