@@ -7,33 +7,56 @@ nav_order: 3
 # 🛰️ Guide to Using Satcat.com
 
 {: .important }
-> This page is still under update. Will notify when it's finished
+> This page is still under update. Will notify when it's finished!
 
 {: .important }
 > **Disclaimer**
-> This guide is based on my own experience, including several functions that I use more frequently. But feel free to explore other functionalities following their documentations! However, be cautious that their documentation is not THE MOST DETAILED :P, maybe need some trail and error.
-Maybe you can also keep this document updated so it's a great reference for any other people who want to use it!
+> *This guide is based on my own experience, including several functions that I use more frequently. But feel free to explore other functionalities following their documentations! However, be cautious that their documentation is not THE MOST DETAILED :P, maybe need some trail and error.
+Maybe you can also keep this document updated so it's a great reference for any other people who want to use it!*
 
 ## 1. What is Satcat?
 Satcat is a data aggregation platform for spaceflight safety, used by satellite operators to assess conjunction risk, maintain orbit custody, and coordinate maneuvers in an ever-growing congested space environment. Satcat combines operator-submitted ephemerides, commercial catalog data, and third party sensor networks to evaluate conjunction events and deliver data through APIs and standard file formats.
 
 ## 2. Satcat website
 
-# 1. Searching and Filtering
-Describe the main search features here: basic search by name, advanced filtering by launch year, orbit type, etc.
+### 1. Satellite Directory (**Directory tab**)
+You can search for satellite directory here using satellite name/NORAD ID/COSPAR ID. It provides all related information for each traked satellite, including:
+* Launcher & manufacturer
+* Dimensions and other physical properties
+* Visibility
+* Orbit information: TLE data, Ephemerides
+* Conjuctions
+* etc...
 
-NORAD ID: The North American Aerospace Defense Command (NORAD) maintains the satellite catalog. Each tracked object is assigned a unique identifier known as the SATCAT number or NORAD ID.
 
-* **Example Query:** Search for the International Space Station (ISS) using its NORAD ID (25544) or name.
+{: .important}
+> **NORAD ID**: The North American Aerospace Defense Command (NORAD) maintains the satellite catalog. Each tracked object is assigned a unique identifier known as the SATCAT number or NORAD ID.
+> **Two-Line Element (TLE)** is a standard, text-based data format that concisely describes the orbit of an Earth-orbiting satellite or space object at a specific time (epoch). TLEs contain simplified Keplerian elements (like inclination, eccentricity, mean motion) plus drag/perturbation factors, allowing users to predict future positions and velocities using models like SGP4.
+> **Ephemeris** is a table or dataset providing the predicted positions, velocities, and sometimes other data (like brightness) for satellites. There are 3 main types of files: OPM, OMM, and OEM.
 
-# 2. Retrieving TLE Data
-Two-Line Element (TLE) sets are the standard format for communicating orbital state vectors. You will usually retrieve these from Satcat.com.
+### 2. Screening for Conjunctions (**Screenings tab**)
+Screening allows you to submit a job to search for conjunctions providing a primary and/or secondary satellite. 
 
-* **Format:** TLEs are composed of two 69-character lines of data (plus an optional header line).
-* **Usage:** TLEs are essential for performing orbit propagation (predicting future position).
+Click one **"New Screening Job"**, enter a title for this screening job at **"Screening job title"**. Screenig uses Ephemeris files or TLE. In the **"Primary RSOs"** field, you can search for the Ephemeris file of your primary satellites from the database, or upload your own Ephemeris file/TLE by clicking **"Upload custom data"**.
 
-# 3. Visualizing Orbits
-(Describe any built-in visualization tools Satcat.com might have, or how to export data for external tools like GMAT or Python libraries.)
+In the **"Secondary RSOs"** field, upload Ephemeris file for your secondary satellite in the same manner. If you don't have a desired secondary satellite and want to do a general screening, you can tick the box of **"Screen 18th SDS catalog"**/**"Screen Ephemeris Repository"**, which will search through the database for all conjunctions related to primary satellite.
+
+When done, click **"Start Screening job"**. Your screening job will appear as a box in panel with all the screening jobs. The update of search result is asychronous (other jobs can be carried out while one is running). You might observe the number of conjunctions detected keeps changing for a few minutes if the search space is big. When the job is finished, the top right conrner of your job will change to tick.
+
+Click into one of the screening job box to see all the found conjunctions. Click into one of the boxes of conjunctions will bring you to **Conjunction tab**.
+
+
+### 3. Conjunction Information (**Conjunctions tab**)
+Each conjunction has a series of information associated with it. Including propability of collision (Pc), time of closest approach (TCA), miss distances, etc... You can read these directly from the website or download the conjunction data message (CDM) file.
+
+### 4. Other useful tools
+**Sandbox tab**: to visualize 2 satellites movements. Upload TLE, or Ephemeries files, or simply search for them in the Ephemeris database. Satcat can generate a 3D animation for 2 satellites' orbit, as well as graphs for 2 satellites' relative ranges.
+
+**Tools tab**: time converter to convert timestamp across different formats, and TLE comprehension assistants to help you parse TLE and understand differnet segments.
+
+**And some more to be explored...**
+
+
 
 ## 3. Satcat SDK
 
