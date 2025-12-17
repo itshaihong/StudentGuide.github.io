@@ -43,7 +43,9 @@ Screening allows you to submit a job to search for conjunctions providing a prim
 * Enter a title for this screening job at **Screening job title**.
 * In the **Primary RSOs** field, you can search for the Ephemeris file of your primary satellites from the database, or upload your own Ephemeris file/TLE by clicking **Upload custom data**.
 * In the **Secondary RSOs** field, upload Ephemeris file for your secondary satellite in the same manner. If you don't have a desired secondary satellite and want to do a general screening, you can tick the box of **Screen 18th SDS catalog**/**Screen Ephemeris Repository**, which will search through the database for all conjunctions related to primary satellite.
-* When done, click **Start Screening job**. Your screening job will appear as a box in panel with all the screening jobs. The update of search result is asychronous (other jobs can be carried out while one is running). You might observe the number of conjunctions detected keeps changing for a few minutes if the search space is big. When the job is finished, the top right conrner of your job will change to tick.
+* When done, click **Start Screening job**.
+
+Your screening job will appear as a box in panel with all the screening jobs. The update of search result is asychronous (other jobs can be carried out while one is running). You might observe the number of conjunctions detected keeps changing for a few minutes if the search space is big. When the job is finished, the top right conrner of your job will change to tick.
 
 Click into one of the screening job box to see all the found conjunctions. Click into one of the boxes of conjunctions will bring you to **Conjunction tab**.
 
